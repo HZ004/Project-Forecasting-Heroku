@@ -144,7 +144,7 @@ COMPANY1 = st.sidebar.selectbox("Select Company 2 from list",('NIFTY','BANKNIFTY
 							   'WIPRO','WOCKPHARMA','YESBANK','ZEEL','ZENSARTECH','ZYDUSWELL'))
 
 
-MODEL = st.sidebar.selectbox('Forecasting Model',('Model Based','Data Driven','ARIMA','LSTM Artificial Neural Network','FB Prophet'))
+MODEL = st.sidebar.selectbox('Forecasting Model',('Model Based','Data Driven','ARIMA','FB Prophet'))
 
 col1, col2 = st.beta_columns((1,1))
 
@@ -443,7 +443,85 @@ def datad(var):
     st.pyplot(fig)
 
 ###########################################################################################################
+def arima(var):
+    tv = TvDatafeed()
+    data = tv.get_hist(symbol=var,exchange='NSE',n_bars=5000)
+    data['date'] = data.index.astype(str)
+    new = data['date'].str.split(' ',expand=True)
+    data['date'] = new[0]
+    data['date'] = pd.to_datetime(data['date'])
+    data = data.set_index('date',drop=False)
+    
+    from statsmodels.tsa.stattools import adfuller
+    from statsmodels.tsa.stattools import kpss
+	
+    st.header('Auto ARIMA Forecast Result for {}'.format(var))
+    st.write('**Determining stationarity of the dataset using Augmented Dickey-Fuller Test**')
 
+    result=adfuller (data['close'])
+    st.text('Test Statistic: %f' %result[0])
+    st.text('p-value: %f' %result[1])
+
+	
+    st.write('**Determining stationarity of the dataset using Kwiatkowski Phillips Schmidt Shin (KPSS) test**')
+    result_kpss_ct=kpss(data['close'],regression="ct")
+    st.text('Test Statistic: %f' %result_kpss_ct[0])
+    st.text('p-value: %f' %result_kpss_ct[1])
+
+    st.write('**_Test statistic value greater than 0.05 for both ADFuller and KPSS indicate non-stationarity of the data_**')
+
+    # Auto ARIMA on complete Dataset
+    import itertools
+    from math import sqrt
+    import statsmodels.api as sm
+    from sklearn.metrics import mean_squared_error
+    from statsmodels.tsa.arima.model import ARIMA, ARIMAResults
+    from statsmodels.tsa.stattools import adfuller
+    from statsmodels.tsa.seasonal import seasonal_decompose
+    from pandas.plotting import register_matplotlib_converters
+    register_matplotlib_converters()
+
+    ARIMA_model = pm.auto_arima(data['close'], 
+                        start_p=1, 
+                        start_q=1,
+                        test='adf', # use adftest to find optimal 'd'
+                        max_p=3, max_q=3, # maximum p and q
+                        m=1, # frequency of series (if m==1, seasonal is set to FALSE automatically)
+                        d=None,# let model determine 'd'
+                        seasonal=False, # No Seasonality for standard ARIMA
+                        trace=False, #logs 
+                        error_action='warn', #shows errors ('ignore' silences these)
+                        suppress_warnings=True,
+                        stepwise=True)
+    
+    from pandas.tseries.frequencies import DAYS
+    def forecast(ARIMA_model, periods=730):
+        # Forecast
+        n_periods = periods
+        fitted, confint = ARIMA_model.predict(n_periods=n_periods, return_conf_int=True)
+        index_of_fc = pd.date_range(data.index[-1] + pd.DateOffset(days=1), periods = n_periods, freq='D')
+        
+        # make series for plotting purpose
+        fitted_series = pd.Series(fitted.values, index=index_of_fc)
+        lower_series = pd.Series(confint[:, 0], index=index_of_fc)
+        upper_series = pd.Series(confint[:, 1], index=index_of_fc)
+
+        # Plot
+        st.subheader('Auto-ARIMA Forecast')
+        fig = plt.figure(figsize=(20,8))
+        plt.plot(data["close"])
+        plt.plot(fitted_series, color='darkgreen')
+        plt.fill_between(lower_series.index, 
+                        lower_series, 
+                        upper_series, 
+                        color='k', alpha=.15)
+        plt.title("ARIMA - Forecast of Close Price")
+        plt.xlabel('Year')
+        plt.ylabel('Stock Price')
+        st.pyplot(fig)
+
+    forecast(ARIMA_model)
+###########################################################################################################
 def fb(var):
     tv = TvDatafeed()
     data = tv.get_hist(symbol=var,exchange='NSE',n_bars=5000)
@@ -504,6 +582,13 @@ if MODEL == 'Data Driven':
 	
 	with col2:
     	    datad(COMPANY1)
+	
+if MODEL == 'ARIMA':
+	with col1:
+    	    arima(COMPANY)
+	
+	with col2:
+    	    arima(COMPANY1)
 
 	
 if MODEL == 'FB Prophet':
