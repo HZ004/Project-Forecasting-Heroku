@@ -12,3 +12,4 @@ statsmodels==0.13.2
 cufflinks==0.17.3
 pmdarima==2.0.1
 sklearn-pandas==1.8.0
+protobuf==3.20.*
