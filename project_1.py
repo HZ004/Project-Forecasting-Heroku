@@ -43,7 +43,52 @@ COMPANY = st.sidebar.selectbox("Select Company 1 from list",('NIFTY','BANKNIFTY'
 							   'AMARAJABAT','AMBER','AMBUJACEM','APARINDS','APLAPOLLO','APLLTD','APOLLOHOSP','APOLLOTYRE','ARVINDFASN',
 							   'ASAHIINDIA','ASHOKA','ASHOKLEY','ASIANPAINT','ASTERDM','ASTRAL','ASTRAZEN','ATUL','AUBANK','AUROPHARMA',
 							   'AVANTIFEED','AXISBANK','BAJAJ-AUTO','BAJAJCON','BAJAJELEC','BAJAJFINSV','BAJAJHLDNG','BAJFINANCE',
-							   'BALKRISIND','BALMLAWRIE','BALRAMCHIN','BANDHANBNK'))
+							   'BALKRISIND','BALMLAWRIE','BALRAMCHIN','BANDHANBNK','BANKBARODA','BANKINDIA','BASF','BATAINDIA',
+							   'BBTC','BDL','BEL','BEML','BERGEPAINT','BHARATFORG','BHARATRAS','BHARTIARTL','BHEL','BIOCON',
+							   'BIRLACORPN','BLUEDART','BLUESTARCO','BOSCHLTD','BPCL','BRIGADE','BRITANNIA','BSE','BSOFT','CADILAHC',
+							   'CANBK','CANFINHOME','CAPLIPOINT','CARBORUNIV','CASTROLIND','CCL','CDSL','CEATLTD','CENTRALBK',
+							   'CENTURYPLY','CENTURYTEX','CERA','CESC','CGCL','CHALET','CHAMBLFERT','CHOLAFIN','CHOLAHLDNG','CIPLA',
+							   'COALINDIA','COCHINSHIP','COLPAL','CONCOR','COROMANDEL','CREDITACC','CRISIL','CROMPTON','CSBBANK',
+							   'CUB','CUMMINSIND','CYIENT','DABUR','DALBHARAT','DBCORP','DBL','DCBBANK','DCMSHRIRAM','DEEPAKNTR',
+							   'DELTACORP','DEN','DHANUKA','DIAMONDYD','DIVISLAB','DIXON','DLF','DMART','DRREDDY','ECLERX','EDELWEISS',
+							   'EICHERMOT','EIDPARRY','EIHOTEL','ELGIEQUIP','EMAMILTD','ENDURANCE','ENGINERSIN','EQUITAS','ERIS',
+							   'ESABINDIA','ESCORTS','ESSELPACK','EXIDEIND','FACT','FAIRCHEM','FCONSUMER','FDC','FEDERALBNK',
+							   'FINCABLES','FINEORG','FINPIPE','FLFL','FLUOROCHEM','FMGOETZE','FORTIS','FRETAIL','FSL','GAEL',
+							   'GAIL','GALAXYSURF','GARFIBRES','GEPIL','GESHIP','GET&D','GICRE','GILLETTE','GLAXO','GLENMARK',
+							   'GMMPFAUDLR','GMRINFRA','GNFC','GODFRYPHLP','GODREJAGRO','GODREJCP','GODREJIND','GODREJPROP',
+							   'GPPL','GRANULES','GRAPHITE','GRASIM','GREAVESCOT','GREENLAM','GRINDWELL','GRSE','GSFC','GSKCONS',
+							   'GSPL','GUJALKALI','GUJGASLTD','GULFOILLUB','HAL','HATHWAY','HATSUN','HAVELLS','HCLTECH','HDFC',
+							   'HDFCAMC','HDFCBANK','HDFCLIFE','HEG','HEIDELBERG','HEROMOTOCO','HEXAWARE','HFCL','HGINFRA','HINDALCO',
+							   'HINDCOPPER','HINDPETRO','HINDUNILVR','HINDZINC','HONAUT','HSCL','HUDCO','IBREALEST','IBULHSGFIN',
+							   'IBVENTURES','ICICIBANK','ICICIGI','ICICIPRULI','ICRA','IDBI','IDEA','IDFC','IDFCFIRSTB','IEX','IGL',
+							   'IIFL','IIFLWAM','INDHOTEL','INDIACEM','INDIAMART','INDIANB','INDIGO','INDOCO','INDOSTAR','INDUSINDBK',
+							   'INFIBEAM','INFRATEL','INFY','INGERRAND','INOXLEISUR','IOB','IOC','IPCALAB','IRB','IRCON','IRCTC','ISEC',
+							   'ITC','ITDC','ITI','JAGRAN','JBCHEPHARM','JCHAC','JINDALSAW','JINDALSTEL','JKCEMENT','JKLAKSHMI','JKPAPER',
+							   'JMFINANCIL','JSL','JSWENERGY','JSWHL','JSWSTEEL','JUBILANT','JUBLFOOD','JUSTDIAL','JYOTHYLAB',
+							   'KAJARIACER','KALPATPOWR','KANSAINER','KARURVYSYA','KEC','KEI','KIOCL','KIRLOSENG','KNRCON','KOTAKBANK',
+							   'KPRMILL','KRBL','KSB','KSCL','KTKBANK','L&TFH','LALPATHLAB','LAOPALA','LAURUSLABS','LAXMIMACH',
+							   'LEMONTREE','LICHSGFIN','LINDEINDIA','LT','LTI','LTTS','LUPIN','LUXIND','M&M','M&MFIN','MAHABANK',
+							   'MAHINDCIE','MAHLOG','MAHSCOOTER','MAHSEAMLES','MANAPPURAM','MARICO','MARUTI','MASFIN','MAXINDIA',
+							   'MCDOWELL-N','METROPOLIS','MFSL','MGL','MHRIL','MIDHANI','MINDACORP','MINDAIND','MINDTREE','MMTC',
+							   'MOIL','MOTHERSUMI','MOTILALOFS','MPHASIS','MRF','MRPL','MUTHOOTFIN','NAM-INDIA','NATCOPHARM',
+							   'NATIONALUM','NAUKRI','NAVINFLUOR','NAVNETEDUL','NBCC','NCC','NESCO','NETWORK18','NH','NHPC','NIACL',
+							   'NIITLTD','NIITTECH','NILKAMAL','NLCINDIA','NMDC','NTPC','OBEROIRLTY','OFSS','OIL','OMAXE','ONGC',
+							   'ORIENTELEC','ORIENTREF','PAGEIND','PAPERPROD','PEL','PERSISTENT','PETRONET','PFC','PFIZER','PGHH',
+							   'PGHL','PHOENIXLTD','PIDILITIND','PIIND','PNB','PNBHOUSING','PNCINFRA','POLYCAB','POLYMED','POWERGRID',
+							   'POWERINDIA','PRESTIGE','PRINCEPIPE','PRSMJOHNSN','PSPPROJECT','PTC','PVR','QUESS','RADICO','RAIN',
+							   'RAJESHEXPO','RALLIS','RAMCOCEM','RATNAMANI','RAYMOND','RBLBANK','RCF','RECLTD','REDINGTON','RELAXO',
+							   'RELIANCE','RESPONIND','RITES','RVNL','SAIL','SANOFI','SBICARD','SBILIFE','SBIN','SCHAEFFLER','SCHNEIDER',
+							   'SCI','SEQUENT','SFL','SHILPAMED','SHOPERSTOP','SHREECEM','SHRIRAMCIT','SIEMENS','SIS','SJVN','SKFINDIA',
+							   'SOBHA','SOLARA','SOLARINDS','SONATSOFTW','SPANDANA','SPARC','SRF','SRTRANSFIN','STAR','STARCEMENT',
+							   'STRTECH','SUDARSCHEM','SUMICHEM','SUNCLAYLTD','SUNDARMFIN','SUNDRMFAST','SUNPHARMA','SUNTECK','SUNTV',
+							   'SUPPETRO','SUPRAJIT','SUPREMEIND','SUVENPHAR','SWANENERGY','SWSOLAR','SYMPHONY','SYNGENE','TASTYBITE',
+							   'TATACHEM','TATACOMM','TATACONSUM','TATAELXSI','TATAINVEST','TATAMOTORS','TATAPOWER','TATASTEEL',
+							   'TATASTLBSL','TCI','TCIEXP','TCNSBRANDS','TCS','TEAMLEASE','TECHM','TECHNOE','THERMAX','THYROCARE',
+							   'TIDEWATER','TIINDIA','TIMKEN','TITAN','TORNTPHARM','TORNTPOWER','TRENT','TRIDENT','TRITURBINE',
+							   'TTKPRESTIG','TV18BRDCST','TVSMOTOR','UBL','UCOBANK','UJJIVAN','UJJIVANSFB','ULTRACEMCO','UNIONBANK',
+							   'UPL','VAIBHAVGBL','VAKRANGEE','VARROC','VBL','VEDL','VENKEYS','VESUVIUS','VGUARD','VINATIORGA',
+							   'VIPIND','VMART','VOLTAS','VRLLOG','VSTIND','VTL','WABCOINDIA','WELCORP','WELSPUNIND','WHIRLPOOL',
+							   'WIPRO','WOCKPHARMA','YESBANK','ZEEL','ZENSARTECH','ZYDUSWELL'))
 
 COMPANY1 = st.sidebar.selectbox("Select Company 2 from list",('NIFTY','BANKNIFTY','3MINDIA','AARTIDRUGS','AARTIIND','AAVAS','ABB','ABCAPITAL','ABFRL','ACC',
 							   'ACCELYA','ADANIENT','ADANIGAS','ADANIGREEN','ADANIPORTS','ADANIPOWER','ADANITRANS','ADVENZYMES',
@@ -51,7 +96,52 @@ COMPANY1 = st.sidebar.selectbox("Select Company 2 from list",('NIFTY','BANKNIFTY
 							   'AMARAJABAT','AMBER','AMBUJACEM','APARINDS','APLAPOLLO','APLLTD','APOLLOHOSP','APOLLOTYRE','ARVINDFASN',
 							   'ASAHIINDIA','ASHOKA','ASHOKLEY','ASIANPAINT','ASTERDM','ASTRAL','ASTRAZEN','ATUL','AUBANK','AUROPHARMA',
 							   'AVANTIFEED','AXISBANK','BAJAJ-AUTO','BAJAJCON','BAJAJELEC','BAJAJFINSV','BAJAJHLDNG','BAJFINANCE',
-							   'BALKRISIND','BALMLAWRIE','BALRAMCHIN','BANDHANBNK'))
+							   'BALKRISIND','BALMLAWRIE','BALRAMCHIN','BANDHANBNK','BANKBARODA','BANKINDIA','BASF','BATAINDIA',
+							   'BBTC','BDL','BEL','BEML','BERGEPAINT','BHARATFORG','BHARATRAS','BHARTIARTL','BHEL','BIOCON',
+							   'BIRLACORPN','BLUEDART','BLUESTARCO','BOSCHLTD','BPCL','BRIGADE','BRITANNIA','BSE','BSOFT','CADILAHC',
+							   'CANBK','CANFINHOME','CAPLIPOINT','CARBORUNIV','CASTROLIND','CCL','CDSL','CEATLTD','CENTRALBK',
+							   'CENTURYPLY','CENTURYTEX','CERA','CESC','CGCL','CHALET','CHAMBLFERT','CHOLAFIN','CHOLAHLDNG','CIPLA',
+							   'COALINDIA','COCHINSHIP','COLPAL','CONCOR','COROMANDEL','CREDITACC','CRISIL','CROMPTON','CSBBANK',
+							   'CUB','CUMMINSIND','CYIENT','DABUR','DALBHARAT','DBCORP','DBL','DCBBANK','DCMSHRIRAM','DEEPAKNTR',
+							   'DELTACORP','DEN','DHANUKA','DIAMONDYD','DIVISLAB','DIXON','DLF','DMART','DRREDDY','ECLERX','EDELWEISS',
+							   'EICHERMOT','EIDPARRY','EIHOTEL','ELGIEQUIP','EMAMILTD','ENDURANCE','ENGINERSIN','EQUITAS','ERIS',
+							   'ESABINDIA','ESCORTS','ESSELPACK','EXIDEIND','FACT','FAIRCHEM','FCONSUMER','FDC','FEDERALBNK',
+							   'FINCABLES','FINEORG','FINPIPE','FLFL','FLUOROCHEM','FMGOETZE','FORTIS','FRETAIL','FSL','GAEL',
+							   'GAIL','GALAXYSURF','GARFIBRES','GEPIL','GESHIP','GET&D','GICRE','GILLETTE','GLAXO','GLENMARK',
+							   'GMMPFAUDLR','GMRINFRA','GNFC','GODFRYPHLP','GODREJAGRO','GODREJCP','GODREJIND','GODREJPROP',
+							   'GPPL','GRANULES','GRAPHITE','GRASIM','GREAVESCOT','GREENLAM','GRINDWELL','GRSE','GSFC','GSKCONS',
+							   'GSPL','GUJALKALI','GUJGASLTD','GULFOILLUB','HAL','HATHWAY','HATSUN','HAVELLS','HCLTECH','HDFC',
+							   'HDFCAMC','HDFCBANK','HDFCLIFE','HEG','HEIDELBERG','HEROMOTOCO','HEXAWARE','HFCL','HGINFRA','HINDALCO',
+							   'HINDCOPPER','HINDPETRO','HINDUNILVR','HINDZINC','HONAUT','HSCL','HUDCO','IBREALEST','IBULHSGFIN',
+							   'IBVENTURES','ICICIBANK','ICICIGI','ICICIPRULI','ICRA','IDBI','IDEA','IDFC','IDFCFIRSTB','IEX','IGL',
+							   'IIFL','IIFLWAM','INDHOTEL','INDIACEM','INDIAMART','INDIANB','INDIGO','INDOCO','INDOSTAR','INDUSINDBK',
+							   'INFIBEAM','INFRATEL','INFY','INGERRAND','INOXLEISUR','IOB','IOC','IPCALAB','IRB','IRCON','IRCTC','ISEC',
+							   'ITC','ITDC','ITI','JAGRAN','JBCHEPHARM','JCHAC','JINDALSAW','JINDALSTEL','JKCEMENT','JKLAKSHMI','JKPAPER',
+							   'JMFINANCIL','JSL','JSWENERGY','JSWHL','JSWSTEEL','JUBILANT','JUBLFOOD','JUSTDIAL','JYOTHYLAB',
+							   'KAJARIACER','KALPATPOWR','KANSAINER','KARURVYSYA','KEC','KEI','KIOCL','KIRLOSENG','KNRCON','KOTAKBANK',
+							   'KPRMILL','KRBL','KSB','KSCL','KTKBANK','L&TFH','LALPATHLAB','LAOPALA','LAURUSLABS','LAXMIMACH',
+							   'LEMONTREE','LICHSGFIN','LINDEINDIA','LT','LTI','LTTS','LUPIN','LUXIND','M&M','M&MFIN','MAHABANK',
+							   'MAHINDCIE','MAHLOG','MAHSCOOTER','MAHSEAMLES','MANAPPURAM','MARICO','MARUTI','MASFIN','MAXINDIA',
+							   'MCDOWELL-N','METROPOLIS','MFSL','MGL','MHRIL','MIDHANI','MINDACORP','MINDAIND','MINDTREE','MMTC',
+							   'MOIL','MOTHERSUMI','MOTILALOFS','MPHASIS','MRF','MRPL','MUTHOOTFIN','NAM-INDIA','NATCOPHARM',
+							   'NATIONALUM','NAUKRI','NAVINFLUOR','NAVNETEDUL','NBCC','NCC','NESCO','NETWORK18','NH','NHPC','NIACL',
+							   'NIITLTD','NIITTECH','NILKAMAL','NLCINDIA','NMDC','NTPC','OBEROIRLTY','OFSS','OIL','OMAXE','ONGC',
+							   'ORIENTELEC','ORIENTREF','PAGEIND','PAPERPROD','PEL','PERSISTENT','PETRONET','PFC','PFIZER','PGHH',
+							   'PGHL','PHOENIXLTD','PIDILITIND','PIIND','PNB','PNBHOUSING','PNCINFRA','POLYCAB','POLYMED','POWERGRID',
+							   'POWERINDIA','PRESTIGE','PRINCEPIPE','PRSMJOHNSN','PSPPROJECT','PTC','PVR','QUESS','RADICO','RAIN',
+							   'RAJESHEXPO','RALLIS','RAMCOCEM','RATNAMANI','RAYMOND','RBLBANK','RCF','RECLTD','REDINGTON','RELAXO',
+							   'RELIANCE','RESPONIND','RITES','RVNL','SAIL','SANOFI','SBICARD','SBILIFE','SBIN','SCHAEFFLER','SCHNEIDER',
+							   'SCI','SEQUENT','SFL','SHILPAMED','SHOPERSTOP','SHREECEM','SHRIRAMCIT','SIEMENS','SIS','SJVN','SKFINDIA',
+							   'SOBHA','SOLARA','SOLARINDS','SONATSOFTW','SPANDANA','SPARC','SRF','SRTRANSFIN','STAR','STARCEMENT',
+							   'STRTECH','SUDARSCHEM','SUMICHEM','SUNCLAYLTD','SUNDARMFIN','SUNDRMFAST','SUNPHARMA','SUNTECK','SUNTV',
+							   'SUPPETRO','SUPRAJIT','SUPREMEIND','SUVENPHAR','SWANENERGY','SWSOLAR','SYMPHONY','SYNGENE','TASTYBITE',
+							   'TATACHEM','TATACOMM','TATACONSUM','TATAELXSI','TATAINVEST','TATAMOTORS','TATAPOWER','TATASTEEL',
+							   'TATASTLBSL','TCI','TCIEXP','TCNSBRANDS','TCS','TEAMLEASE','TECHM','TECHNOE','THERMAX','THYROCARE',
+							   'TIDEWATER','TIINDIA','TIMKEN','TITAN','TORNTPHARM','TORNTPOWER','TRENT','TRIDENT','TRITURBINE',
+							   'TTKPRESTIG','TV18BRDCST','TVSMOTOR','UBL','UCOBANK','UJJIVAN','UJJIVANSFB','ULTRACEMCO','UNIONBANK',
+							   'UPL','VAIBHAVGBL','VAKRANGEE','VARROC','VBL','VEDL','VENKEYS','VESUVIUS','VGUARD','VINATIORGA',
+							   'VIPIND','VMART','VOLTAS','VRLLOG','VSTIND','VTL','WABCOINDIA','WELCORP','WELSPUNIND','WHIRLPOOL',
+							   'WIPRO','WOCKPHARMA','YESBANK','ZEEL','ZENSARTECH','ZYDUSWELL'))
 
 
 MODEL = st.sidebar.selectbox('Forecasting Model',('Model Based','Data Driven','ARIMA','LSTM Artificial Neural Network','FB Prophet'))
@@ -354,166 +444,6 @@ def datad(var):
 
 ###########################################################################################################
 
-def arima(var):
-    tv = TvDatafeed()
-    data = tv.get_hist(symbol=var,exchange='NSE',n_bars=5000)
-    data['date'] = data.index.astype(str)
-    new = data['date'].str.split(' ',expand=True)
-    data['date'] = new[0]
-    data['date'] = pd.to_datetime(data['date'])
-    data = data.set_index('date',drop=False)
-    
-    from statsmodels.tsa.stattools import adfuller
-    from statsmodels.tsa.stattools import kpss
-	
-    st.header('Auto ARIMA Forecast Result for {}'.format(var))
-    st.write('**Determining stationarity of the dataset using Augmented Dickey-Fuller Test**')
-
-    result=adfuller (data['close'])
-    st.text('Test Statistic: %f' %result[0])
-    st.text('p-value: %f' %result[1])
-
-	
-    st.write('**Determining stationarity of the dataset using Kwiatkowski Phillips Schmidt Shin (KPSS) test**')
-    result_kpss_ct=kpss(data['close'],regression="ct")
-    st.text('Test Statistic: %f' %result_kpss_ct[0])
-    st.text('p-value: %f' %result_kpss_ct[1])
-
-    st.write('**_Test statistic value greater than 0.05 for both ADFuller and KPSS indicate non-stationarity of the data_**')
-
-    # Auto ARIMA on complete Dataset
-    import itertools
-    from math import sqrt
-    import statsmodels.api as sm
-    from sklearn.metrics import mean_squared_error
-    from statsmodels.tsa.arima.model import ARIMA, ARIMAResults
-    from statsmodels.tsa.stattools import adfuller
-    from statsmodels.tsa.seasonal import seasonal_decompose
-    from pandas.plotting import register_matplotlib_converters
-    register_matplotlib_converters()
-
-    ARIMA_model = pm.auto_arima(data['close'], 
-                        start_p=1, 
-                        start_q=1,
-                        test='adf', # use adftest to find optimal 'd'
-                        max_p=3, max_q=3, # maximum p and q
-                        m=1, # frequency of series (if m==1, seasonal is set to FALSE automatically)
-                        d=None,# let model determine 'd'
-                        seasonal=False, # No Seasonality for standard ARIMA
-                        trace=False, #logs 
-                        error_action='warn', #shows errors ('ignore' silences these)
-                        suppress_warnings=True,
-                        stepwise=True)
-    
-    from pandas.tseries.frequencies import DAYS
-    def forecast(ARIMA_model, periods=730):
-        # Forecast
-        n_periods = periods
-        fitted, confint = ARIMA_model.predict(n_periods=n_periods, return_conf_int=True)
-        index_of_fc = pd.date_range(data.index[-1] + pd.DateOffset(days=1), periods = n_periods, freq='D')
-        
-        # make series for plotting purpose
-        fitted_series = pd.Series(fitted.values, index=index_of_fc)
-        lower_series = pd.Series(confint[:, 0], index=index_of_fc)
-        upper_series = pd.Series(confint[:, 1], index=index_of_fc)
-
-        # Plot
-        st.subheader('Auto-ARIMA Forecast')
-        fig = plt.figure(figsize=(20,8))
-        plt.plot(data["close"])
-        plt.plot(fitted_series, color='darkgreen')
-        plt.fill_between(lower_series.index, 
-                        lower_series, 
-                        upper_series, 
-                        color='k', alpha=.15)
-        plt.title("ARIMA - Forecast of Close Price")
-        plt.xlabel('Year')
-        plt.ylabel('Stock Price')
-        st.pyplot(fig)
-
-    forecast(ARIMA_model)
-
-#############################################################################################
-
-def lstm(var):
-    tv = TvDatafeed()
-    data = tv.get_hist(symbol=var,exchange='NSE',n_bars=5000)
-    data['date'] = data.index.astype(str)
-    new = data['date'].str.split(' ',expand=True)
-    data['date'] = new[0]
-    data['date'] = pd.to_datetime(data['date'])
-    data = data.set_index('date',drop=False)
-    
-    from sklearn.preprocessing import MinMaxScaler
-    from keras.models import Sequential
-    from keras.layers import Dense, Dropout, LSTM
-
-    new_data=data.drop(['symbol','open','high','low','volume','date',],axis=1)
-
-    #creating train and test sets
-    dataset = new_data
-
-    test_size = round(0.25 * (dataset.shape[0]+1))
-    train = dataset[:-test_size]
-    valid = dataset[-test_size:]
-
-    #converting dataset into x_train and y_train
-    scaler = MinMaxScaler(feature_range=(0, 1))
-    scaled_data = scaler.fit_transform(dataset)
-
-    x_train, y_train = [], []
-
-    for i in range(46,len(train)):
-        x_train.append(scaled_data[i-46:i,0])
-        y_train.append(scaled_data[i,0])
-
-    x_train, y_train = np.array(x_train), np.array(y_train)
-    x_train = np.reshape(x_train, (x_train.shape[0],x_train.shape[1],1))
-
-    # create and fit the LSTM network
-    model = Sequential()
-    model.add(LSTM(units=50, return_sequences=True, input_shape=(x_train.shape[1],1)))
-    model.add(LSTM(units=50))
-    model.add(Dense(1))
-
-    model.compile(loss='mean_squared_error', optimizer='adam')
-    model.fit(x_train, y_train, epochs=1, batch_size=1, verbose=2)
-
-    #predicting 896 values, using past 46 from the train data
-    inputs = new_data[len(new_data) - len(valid) - 46:].values
-    inputs = inputs.reshape(-1,1)
-    inputs  = scaler.transform(inputs)
-
-    X_test = []
-
-    for i in range(46,inputs.shape[0]):
-        X_test.append(inputs[i-46:i,0])
-
-    X_test = np.array(X_test)
-    X_test = np.reshape(X_test, (X_test.shape[0],X_test.shape[1],1))
-
-    closing_price = model.predict(X_test)
-    closing_price = scaler.inverse_transform(closing_price)
-
-    # Results
-    rms=np.sqrt(np.mean(np.power((valid-closing_price),2)))
-
-    st.header('LSTM Artificial Neural Network based Forecasting for {}'.format(var))
-    st.subheader('Forecast by LSTM ANN')
-    #for plotting
-    fig = plt.figure(figsize=(25,10))
-    train = dataset[:-test_size]
-    valid = dataset[-test_size:]
-    valid['Predictions'] = closing_price
-    plt.plot(dataset['close'], label='original')
-    plt.plot(valid['Predictions'],label='predicted')
-    plt.xlabel('Year')
-    plt.ylabel('Stock Price')
-    plt.legend()
-    st.pyplot(fig)
-
-#################################################################################
-
 def fb(var):
     tv = TvDatafeed()
     data = tv.get_hist(symbol=var,exchange='NSE',n_bars=5000)
@@ -575,19 +505,6 @@ if MODEL == 'Data Driven':
 	with col2:
     	    datad(COMPANY1)
 
-if MODEL == 'ARIMA':
-	with col1:
-    	    arima(COMPANY)
-	
-	with col2:
-    	    arima(COMPANY1)
-
-if MODEL == 'LSTM Artificial Neural Network':
-	with col1:
-    	    lstm(COMPANY)
-
-	with col2:
-    	    lstm(COMPANY1)
 	
 if MODEL == 'FB Prophet':
 	with col1:
