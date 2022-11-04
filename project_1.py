@@ -12,8 +12,6 @@ warnings.filterwarnings("ignore")
 import pmdarima as pm
 import streamlit as st
 from tvDatafeed import TvDatafeed ,Interval
-import fbprophet
-from fbprophet import Prophet
 
 st.set_page_config(layout="wide")
 
@@ -144,7 +142,7 @@ COMPANY1 = st.sidebar.selectbox("Select Company 2 from list",('NIFTY','BANKNIFTY
 							   'WIPRO','WOCKPHARMA','YESBANK','ZEEL','ZENSARTECH','ZYDUSWELL'))
 
 
-MODEL = st.sidebar.selectbox('Forecasting Model',('Model Based','Data Driven','ARIMA','FB Prophet'))
+MODEL = st.sidebar.selectbox('Forecasting Model',('Model Based','Data Driven','ARIMA'))
 
 col1, col2 = st.beta_columns((1,1))
 
@@ -522,46 +520,7 @@ def arima(var):
 
     forecast(ARIMA_model)
 ###########################################################################################################
-def fb(var):
-    tv = TvDatafeed()
-    data = tv.get_hist(symbol=var,exchange='NSE',n_bars=5000)
-    data['date'] = data.index.astype(str)
-    new = data['date'].str.split(' ',expand=True)
-    data['date'] = new[0]
-    data['date'] = pd.to_datetime(data['date'])
-    data = data.set_index('date',drop=False)
-    
-    import fbprophet
-    from fbprophet import Prophet
 
-    data2 = data
-    data2['ds'] = pd.to_datetime(data['date'])
-    data2['y'] = (data2['close'])
-    data2 = data2[['ds','y']].reset_index(drop = True)
-
-    model = Prophet()
-    model.fit(data2)
-
-    future = model.make_future_dataframe(periods = 730)
-    pred = model.predict(future)
-
-    pred.yhat[pred.yhat < 0] = 0
-    pred.yhat_lower[pred.yhat_lower < 0] = 0
-    pred.yhat_upper[pred.yhat_upper < 0] = 0
-    pred.trend_upper[pred.trend_upper < 0] = 0
-    pred.trend_lower[pred.trend_lower < 0] = 0
-
-    st.header('Forecast by FB Prophet Model for {}'.format(var))
-    st.subheader('Predicted Result')
-    st.pyplot(model.plot(pred, xlabel='Year', ylabel='Stock Price'))
-    st.subheader('Other Components of FBPROPHET')
-    st.write(model.plot_components(pred))
-
-    se = np.square(pred.loc[:, 'yhat'] - data2.y)
-    mse = np.mean(se)
-    rmse = np.sqrt(mse)
-
-#######################################################################################
 with col1:
     baseplots(COMPANY) 
 
@@ -591,9 +550,3 @@ if MODEL == 'ARIMA':
     	    arima(COMPANY1)
 
 	
-if MODEL == 'FB Prophet':
-	with col1:
-    	    fb(COMPANY) 
-
-	with col2:
-    	    fb(COMPANY1)
