@@ -144,7 +144,7 @@ COMPANY1 = st.sidebar.selectbox("Select Company 2 from list",('NIFTY','BANKNIFTY
 
 MODEL = st.sidebar.selectbox('Forecasting Model',('Model Based','Data Driven','ARIMA'))
 
-col1, col2 = st.beta_columns((1,1))
+col1, col2 = st.columns((1,1))
 
 #################################################################################
 def baseplots(var):
