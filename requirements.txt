@@ -4,9 +4,7 @@ matplotlib
 scipy
 tvdatafeed
 streamlit
-pystan~=2.14
 plotly
-fbprophet==0.7.1
 seaborn
 statsmodels==0.13.2
 cufflinks
